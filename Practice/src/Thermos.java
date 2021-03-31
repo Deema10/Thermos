@@ -20,6 +20,15 @@ public class Thermos {
 				System.out.print("The capacity of thermos is 1 litre");
 			}
 		}
+	
+	void pourLiquid(double P)
+	{
+		if(P <= 1) {
+			Qty = (float) (Qty - P);
+		}else {
+			System.out.print("The capacity of thermos is 1 litre");
+		}
+	}
 		
 		void displayDetails() {
 			System.out.print("\nBrand: "+Brand);
@@ -31,6 +40,7 @@ public class Thermos {
 		// TODO Auto-generated method stub
 		Thermos Godrej = new Thermos(0, "Godrej", "Orange Juice");
 		Godrej.addLiquid(0.8  );
+		Godrej.pourLiquid(0.4);
 		Godrej.displayDetails();
 	}
 
